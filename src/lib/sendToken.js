@@ -11,7 +11,7 @@ const sendToken = (res, user, message, statusCode) => {
     .cookie("chat2", token, {
       maxAge: 24 * 60 * 60 * 1000 * 5,
       httpOnly: true,
-      sameSite: "None",
+      sameSite: "none",
       secure: true,
     })
     .json({ success: true, message, user });
